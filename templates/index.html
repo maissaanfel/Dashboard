@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+		<link rel="stylesheet" href="{{url_for('static', filename='style.css')}}"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+	</head>
+	<body>
+		<div class="grid-container">
+		  <header class="header">
+			<p id="dash-title">
+				WELCOME TO PRAVAN UNIVERSITY!
+			</p>
+			<button id="btn_refresh" onclick="loadData()">
+				Update
+			</button>
+		  </header>
+		  <aside class="sidenav">
+			<div id="logo">
+				<img src="{{url_for('static', filename='img/P.png')}}" height="40px" width="40px"/>
+                <p>University</p>
+			</div>	
+
+			<div id="mySidenav" class="sidenav">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				<a href="/index">Dashboard</a>
+				<a href="/index1">Show More</a>
+				<a href="/index2">Students</a>
+				<a href="#">About</a>
+				<a href="#">Settings</a>
+				<a href="/">Logout</a>
+			  </div>
+			  <div id="main">
+				<span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+			  </div>
+		  </aside>
+		  <main class="main">
+			<div class="card" id="card1">
+				<div class="card-header">
+					<p>Horizontal Bar Chart : Number of girls per year</p>
+				</div>
+				<div class="card-content1">
+					<canvas id="bar-chart-horizontal" width="500" height="200"></canvas>
+				</div>	
+			</div>
+			<div class="card" id="card2">	
+				<div class="card-header">
+					<p>Bar Chart : Number of students per year.</p>
+				</div>
+				<div class="card-content">	
+					<canvas id="bar-chart" height="220" width="350"></canvas>
+				</div>				
+			</div>
+			<div class="card" id="card3">	
+				<div class="card-header">
+					<p>Line Chart : The evolution of students in a speciality per year</p>
+				</div>
+				<div class="card-content" >
+					<canvas id="line-chart" height="230" width="600"></canvas>
+				</div>
+			</div>
+			<div class="card" id="card4">		
+				<div class="card-header1">
+					<p>Pie Chart : Number of students who have had an average greater than or equal to 10 per year</p>
+				</div>
+				<div class="card-content" >
+					<canvas id="pie-chart" height="210" width="350"></canvas>	
+				</div>
+			</div>
+		  </main>
+		  <footer class="footer">
+			  <p>Presenté par BENABED Anfel à Mr Boubenia.</p>
+		  </footer>
+		</div>
+		<script src="{{url_for('static', filename='script.js')}}"></script>
+	</body>
+</html>

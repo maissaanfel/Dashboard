@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+		<link rel="stylesheet" href="{{url_for('static', filename='style.css')}}"/>	
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+	</head>
+	<body>
+		<div class="grid-container">
+		  <header class="header">
+			<p id="dash-title">
+				WELCOME TO PRAVAN UNIVERSITY!
+			</p>
+		  </header>
+		  <aside class="sidenav">
+			<div id="logo">
+				<img src="{{url_for('static', filename='img/P.png')}}" height="40px" width="40px"/>
+                <p>University</p>
+			</div>	
+
+			<div id="mySidenav" class="sidenav">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				<a href="/index">Dashboard</a>
+				<a href="/index1">Show More</a>
+				<a href="/index2">Students</a>
+				<a href="#">About</a>
+				<a href="#">Settings</a>
+				<a href="/">Logout</a>
+			  </div>
+			  <div id="main">
+				<span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+			  </div>
+		  </aside>
+		  <main class="main">
+			<div class="card" id="cardadd">            
+        <table border="1" id="card-table">
+          <tr>
+            <th class="col_text">Annee</th>
+            <th class="col_number">Matricule </th>
+            <th class="col_text">Nom</th>
+            <th class="col_text">Prenom</th>
+            <th class="col_text">Sexe</th>
+            <th class="col_text">Specialite</th>
+            <th class="col_number">Moyenne</th>
+          </tr>
+        </table>
+		  </main>
+		  <footer class="footer">
+			<p>Presenté par BENABED Anfel à Mr Boubenia.</p>
+		</footer>
+		</div>
+        <script src="{{url_for('static', filename='script.js')}}"></script>
+        <script src="{{url_for('static', filename='script2.js')}}"></script>
+	</body>
+</html>

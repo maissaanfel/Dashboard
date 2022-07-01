@@ -1,0 +1,33 @@
+body{
+    margin:0px;
+	padding: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+    background-image: url("img/bg.jpg");
+}
+
+.main{
+    text-align: center;
+    margin-top: 150px;
+}
+
+.titre{
+    color: white;
+    font-size: 45px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.bouton a{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    border: 1px solid #394263;
+    padding: 20px 50px;
+    border-radius: 50px;
+    background-color: #394263;
+}
+
+.bouton a:hover{
+    border: 1px solid #5e688a;
+    background-color: #5e688a;
+    box-shadow: 5px 5px 20px #5e688a;
+}
